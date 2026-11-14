@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { AuthProvider } from './context/AuthContext'
 
-import Navbar from './components/Navbar'
-import ProtectedRoute from './components/ProtectedRoute'
+import Navbar from './componentes/Navbar'
+import ProtectedRoute from './componentes/ProtectedRoute'
 
 import Login from './pages/Login'
 import Registro from './pages/Registro'

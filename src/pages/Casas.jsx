@@ -51,3 +51,19 @@ export default function Casas() {
     </div>
   )
 }
+useEffect(() => {
+  async function probarConexion() {
+    const { data, error } = await supabase
+      .from('casas')
+      .select('*')
+
+    if (error) {
+      console.error('ERROR DE CONEXIÓN:', error.message)
+    } else {
+      console.log('¡CONEXIÓN EXITOSA!')
+      console.log('Casas encontradas:', data)
+    }
+  }
+
+  probarConexion()
+}, [])
